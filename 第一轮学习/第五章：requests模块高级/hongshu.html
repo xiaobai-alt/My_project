@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>用户登录 - 红薯中文网 - 最新小说排行榜 - 免费小说在线阅读 - 好看的原创小说阅读网站</title>
+    <meta name="keywords" content="玄幻小说,言情小说,免费小说,都市小说,穿越小说,好看的小说,免费小说阅读,红薯网,总裁豪门小说,校园言情小说,hongshu" />
+    <meta name="description" content="红薯小说网,提供最新免费小说.包括玄幻小说,言情小说,网游小说等热门分类.找好看的小说,请到hongshu.com,超快网速,更新频繁,为读者提供免费小说，友好交流的网站." />
+    	<meta name="robots" content="all" />
+	<meta name="googlebot" content="all" />
+	<meta name="baiduspider" content="all" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit" />
+	<meta property="qc:admins" content="56666307776076730563757" />
+	<meta name="copyright" content="本页版权 www.hongshu.com 红薯小说阅读网所有 All right reserved" />
+	<link rel="shortcut icon" href="https://img2.hongshu.com/Public/images/favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="shortcut icon" href="https://img2.hongshu.com/Public/images/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="https://img2.hongshu.com/Public/images/apple-touch-icon.png" />
+    <link href="https://img2.hongshu.com/min/b=Public/css&amp;f=base.css?v=9_07" rel="stylesheet" type="text/css" charset="utf-8" />
+	<script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=Public/javascript&amp;f=jquery.min.js,jquery.lazyload.min.js?v=9_07" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=Public/javascript/lib&amp;f=config.js,logstatic.js,clicktracker.js,template.js,templatehelper.js,util.js,page.js?v=9_07" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=Public/javascript/mod&amp;f=header.js,user.js?v=9_07" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=Public/javascript&amp;f=core.js,user.js?v=9_07" charset="utf-8"></script>
+    <link href="https://img2.hongshu.com/min/b=Public/plugins/jquery-ui&amp;f=jquery-ui.css" rel="stylesheet" type="text/css" charset="utf-8" />
+    <script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=Public/plugins/jquery-ui&amp;f=jquery-ui.js" charset="utf-8"></script>                    
+    <!--[if IE 6]>
+	<link href="https://img2.hongshu.com/Public/css/ie6.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="https://img2.hongshu.com/Public/javascript/lib/DD_belatedPNG.js" ></script> 
+	<script type="text/javascript"> DD_belatedPNG.fix('.tlist li , img ,.titnan-hd span, .titnv-hd span, .titnan-hd span.icon01, .titnan-hd span.icon02, .titnv-hd span, .titnv-hd span.icon01, .titnv-hd span.icon02 , .list2-rank li.num1 span, .list2-rank li.num2 span, .list2-rank li.num3 span, .list3-rank li.num1 span, .list3-rank li.num2 span, .list3-rank li.num3 span, .list4-rank li.num1 span, .list4-rank li.num2 span, .list4-rank li.num3 span , .fmvip , .subsearch , .icon-laba , .footercon .left , .cover .share span, .cover .list span, .cover .phone span , .props .left span , .readsetlf span , .readsetrt span , .zanshang .zanshangicon , .choicebtnnv, .choicebtn3:hover , .form-warp .correct , .choicebtnnan, .choicebtn2:hover , .newcondetail .right .share , .fszmbg'); </script> 
+	<![endif]--> 
+	<!--[if lt IE 7]>
+	<link href="https://img2.hongshu.com/Public/css/ie7.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+    
+
+</head>
+
+<body onload="$('#txtUserName').focus();">
+    <!--header-start-->
+    <style type="text/css">
+    .nav .rtnav li { padding: 8px 0px 0 15px;}
+</style>
+<div style="display: none;">
+    <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278559970&web_id=1278559970"></script>
+</div>
+<div id="divMainHead" class="header">
+    <div class="con">
+        <div class="logo" style="position:relative;">
+            <a href="https://www.hongshu.com" title="红薯中文网"><img src="https://img2.hongshu.com/Public/images/logo.png" width="146" height="64" /></a><!-- <img src="https://img2.hongshu.com/Public/images/paozhu.png" style="position: absolute;top: -10px;z-index: 9; width: 54px;height: 78px;left: 148px;"/> -->
+        </div>
+        <div class="input-group" id='head_search_div'>
+            <input id="txtSkeyWords" class="subsearch " value="" type="text" placeholder="请输入书名或作者名.. " maxlength="250" autocomplete="off" />
+            <span class="input-group-btn " onclick="goToSearch('', 1);">搜&nbsp;&nbsp;索</span>
+            <div class="searchmenu" id="divSearchTip" style="display:none;">
+                <ul class="related01" id="divSearchTipBook">
+                </ul>
+                <ul class="related02" id="divSearchTipAuthor">
+                </ul>
+            </div>
+        </div>
+
+        <div id="loginInfoForm">
+            <div class="per">
+                <div class="left"><a href="javascript:goToLogin(1);" class="loginlink">登录 </a></div>
+                <div class="right">
+                    <a href="{{hs_const_url.weibo_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/weibo-m.png" alt="新浪微博登录"></a>
+                    <a href="{{hs_const_url.qq_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/qq-m.png" alt="qq登录"></a>
+                    <a href="{{hs_const_url.wexin_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/weixin-m.png" alt="微信登录"></a>
+                    <a href="{{hs_const_url.baidu_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/baidu-m.png" alt="百度登录"></a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<div class="nav yahei">
+    <div class="con">
+        <ul class="mainnav">
+            <li><a href="https://www.hongshu.com" class="select">首页</a></li>
+            <li><a href="https://gg.hongshu.com" >男频</a></li>
+            <li><a href="https://mm.hongshu.com" >女频</a></li>
+            <li><a href="https://www.hongshu.com/rankboy.html" >排行榜</a></li>
+            <li><a href="https://www.hongshu.com/bookstore.html" >书库</a></li>
+            <li><a href="https://www.hongshu.com/static/help/fuli.html" target="_blank">福利</a></li>
+            <li><a id="liAuthor" href="https://i.hongshu.com/authorapply.html" target="_blank" >申请作者</a></li>
+            <li><a href="https://wallet.hongshu.com/cash.html" target="_blank" >充值</a></li>
+        </ul>
+        <ul class="rtnav">
+            <li id="liwechattip">
+            	<a href="https://www.hongshu.com/ipcooperate.html" class="navkhd">版权专区</a>
+            	<!--
+                <a href="javascript:void(0)"><span></span>微信</a>
+                <div id="divwechattip" class="phonemask phonemask3" style="display: none;"> <i class="arrow arrow-1"></i> <i class="arrow arrow-2"></i>
+                    <ul>
+                        <li><img src="https://img2.hongshu.com/Public/images/hongshu_wechat.jpg" width="112px" height="112px" />
+                            <p>微信</p>
+                        </li>
+                    </ul>
+                </div>
+                -->
+            	
+            </li>
+            <li id="limediatip">
+                <!--<span href="javascript:void(0)" class="navkhd">客户端<em></em>
+                    <div id="divmediatip" class="phonemask phonemask2" style="display: none;">
+                        <i class="arrow arrow-1"></i>
+                        <i class="arrow arrow-2"></i>
+                        <ul>
+                            <li><img src="https://img2.hongshu.com/Public/images/hongshu_android.png" width="112px" height="112px" />
+                                <p>
+                                    <a href="https://www.hongshu.com/androidzhuanti/" target="_blank" class="applj">
+                                        安卓版
+                                    </a>
+                                </p>
+                            </li>
+                            <li><img src="https://img2.hongshu.com/Public/images/hongshu_ios.png" width="112px" height="112px" />
+                                <p>
+                                    <a href="http://author.hongshu.com/zhuanti/ioszhuanti/" target="_blank" class="applj">
+                                        苹果版
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </span>-->
+            </li>
+        </ul>
+    </div>
+</div>
+<!--模态框背景start-->
+<div class="bodybg" style="display:none; z-index: 1000;"></div>
+<!--模态框背景start-->
+<script type="text/html" id="index_user_info_tmpl">
+    {{if user}}
+    <div class="per on">
+        <div class="left">
+            <a href="{{hs_const_domain.userHost}}/profile/center.do" class="logintx" title="进入个人中心">
+                <img src="{{user.avatar}}" alt="头像"/>
+            </a>
+            <span>
+                <a href="{{hs_const_domain.userHost}}/profile/center.do" title="进入个人中心">
+                    {{ if user.isquick == 1 }}
+                        {{ user.username }}
+                    {{ else }}
+                        {{(user.nickname == "" || user.nickname == null)  ? user.username : user.nickname}}
+                    {{ /if }}
+                </a>
+            </span>
+        </div>
+        <div class="right">
+            <a href="{{hs_const_domain.homeHost}}/profile/bookshelf.do" class="bkshelf" title="我的书架"></a>
+            <a href="#" onclick="getmessage(1);return false;" class="{{ user.messagecount == 0 ? 'new' : 'new2' }}" title="我的消息"></a>
+            <a href="javascript:showMenu();" class="more4" title="菜单"></a>
+            <span class="ic_messagetop mymsg" style="display:none;"></span>
+            <div class="menu2con ic_message mymsg" style="display:none;"><i class="arrow arrow-1"></i> <i class="arrow arrow-2" ></i>
+              <div class="ic_messagetit"><a class="allread" href="#" onclick="deletemsg();return false;">清空消息</a><a href="#" class="messageclose" onclick="$('.mymsg').hide();return false;"></a></div>
+              <ul id="messagelist" pagenum="0" totalpage="1">
+              </ul>   
+              <div class="ic_message_more" onclick="getmessage();"><a href="#" class="an" id="moremsg">加载更多</a> </div>
+              
+          </div>
+        </div>
+        <div id="divUserMenu" class="menu2 menu3" style="display:none">
+            <div class="menu2con menu3con"><i class="arrow arrow-1"></i> <i class="arrow arrow-2"></i>
+                <ul>
+                    <li><a href="{{hs_const_url.usercenter}}">个人中心</a></li>
+                    <li><a href="{{hs_const_url.userset}}">资料设置</a></li>
+                    {{if user.isauthor == 1}}
+                        <li><a href="{{hs_const_domain.homeHost}}/authorlogin/2.do" target="_blank">我的作品</a></li>
+                        {{else}}
+                        <li><a href="{{hs_const_domain.userHost}}/authorapply.html" target="_blank">申请作者</a></li>
+                    {{/if}}
+                    <li><a href="javascript:void(0)" onclick="goToLogout()">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="per">
+        <div class="left"><a href="javascript:goToLogin(1);" class="loginlink">登录 </a></div>
+        <div class="right">
+            <a href="{{hs_const_url.weibo_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/weibo-m.png" alt="新浪微博登录"></a>
+            <a href="{{hs_const_url.qq_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/qq-m.png" alt="qq登录"></a>
+            <a href="{{hs_const_url.wexin_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/weixin-m.png" alt="微信登录"></a>
+            <a href="{{hs_const_url.baidu_login}}" target="_blank"><img src="https://img2.hongshu.com/Public/images/login/baidu-m.png" alt="百度登录"></a>
+        </div>
+    </div>
+    {{/if}}
+</script>
+<script type="text/html" id="messagetpl">
+    {{each list as row i}}
+        {{if row.type == 0}}
+            <li onclick="delonemsg('{{row.id}}');go('https://www.hongshu.com/commentdetail/{{row.bid}}/{{row.comment_id}}.do');"><span class="name2">{{row.reply_name}}</span>回复了你的书评<span class="wordnr"><a href="javascript:void(0);">{{row.title}}</a></span></li>
+        {{else if row.type == 1}}
+            <li onclick="delonemsg('{{row.id}}');go('https://www.hongshu.com/commentdetail/{{row.bid}}/{{row.comment_id}}.do');"><span class="name2">{{row.reply_name}}</span>回复了你对书评<span class="wordnr"><a href="javascript:void(0);">{{row.title}}</a></span>的回复</li>
+        {{else if row.type == 5}}
+            <li onclick="delonemsg('{{row.id}}');go('https://www.hongshu.com/activity/{{row.active_id}}/{{row.comment_id}}.do');"><span class="name2">您</span>参与的<span class="wordnr"><a href="javascript:void(0);">{{row.catename}}</a></span>有奖活动，结果公布了</li>
+        {{else if row.type == 6}}
+            <li onclick="delonemsg('{{row.id}}');go('https://i.hongshu.com/profile/center.do');"><span class="name2">{{row.reply_name}}</span>{{row.title}}</li>
+        {{else if row.type == 7}}
+            <li onclick="delonemsg('{{row.id}}');go('https://i.hongshu.com/profile/center.do');"><span class="name2">{{row.reply_name}}</span>{{row.title}}</li>
+        {{/if}}
+    {{/each}}
+</script>
+<script type="text/javascript">
+    function getmessage(){
+        var pagenum = parseInt($('#messagelist').attr('pagenum'))+1;
+        var totalpage = $('#messagelist').attr('totalpage');
+        $('.mymsg').show();
+        if(pagenum>totalpage){
+            $('#moremsg').html('没有更多消息');
+            return;
+        }
+        $.ajax({
+            url: hs_const_url.bookajax,
+            type: 'post',
+            dataType: 'jsonp',
+            async: false,
+            data: {
+                method: 'getUserMessage',
+                pagenum: pagenum
+            },
+            success: function(data) {
+                if(data.status==1){
+                    $('#moremsg').html('正在加载..');
+                    setTimeout(function(){
+                        var html = template('messagetpl',data);
+                        $('#messagelist').append(html).attr({pagenum:data.pagenum,totalpage:data.totalpage});
+                        $('#moremsg').html('加载更多');
+                    },1000)
+                }else{
+                    $('#moremsg').html('暂无消息');
+                }
+                
+            }
+        })
+    }
+    function deletemsg(){
+        $.ajax({
+            url: hs_const_url.bookajax,
+            type: 'get',
+            dataType: 'json',
+            async: false,
+            data: {
+                method: 'readUserMessage'
+            },
+            success: function(data) {
+                if(data.status==1){
+                    $('#messagelist').html('');
+                    $('#moremsg').html('暂无消息');
+                }
+            }
+        })
+    }
+    function delonemsg(id){
+        $.ajax({
+            type:'get',
+            url: hs_const_url.bookajax,
+            data:{id:id,method:'readOneMsg'},
+            success: function (data){            
+            }
+        });
+    }
+    function go(url){
+        window.location.href = url;
+    }
+</script>
+<div id="divModelLogin" class="login2 yahei clearfix" style="display:none" >
+    <div  class="form-tit2 clearfix" > <span></span>
+        <h2>欢迎您登录红薯中文网</h2>
+        <a class="closebtn " href="javascript:user_modellogin.forcecloseLoginDialog()" >关闭</a> </div>
+        <div class="loginway top20 bom20 clearfix">
+        <p class="c2">不用注册，您可以直接用微信号，QQ号，新浪微博号等登录。</p>
+        <p class="c2">放心，我们不会记住您的这些账号密码</p>
+        <ul class="clearfix top20">
+          <li><a class="weixin-b" target="_blank" href="https://i.hongshu.com/third/wechat/login.html"></a>
+            <p>微信</p>
+          </li>
+          <li><a class="qq-b" target="_blank" href="https://i.hongshu.com/third/qq/login.html"></a>
+            <p>QQ</p>
+          </li>
+          <li><a class="weibo-b" target="_blank" href="https://i.hongshu.com/third/sina/login.html"></a>
+            <p>微博</p>
+          </li>
+          <li><a class="baidu-b" target="_blank" href="https://i.hongshu.com/third/baidu/login.html"></a>
+            <p>百度</p>
+          </li>
+          <li id="liAlipayLogin" style="display:none;"><a class="zhifubao-b" target="_blank" href="https://i.hongshu.com/third/alipay/login.html"></a>
+            <p>支付宝</p>
+          </li>
+        </ul>
+        <div class="more morelogin rt20">
+          <a id="a_MoreloginTip" href="javascript:void(0)" onclick="$('#liAlipayLogin').show();$(this).hide();"><span></span><span></span><span></span></a>
+        </div>
+        </div>
+        <div class="form-warp clearfix">
+
+        <div class="form-tit3 bom10 clearfix">
+            <h3>使用红薯中文网账号登录：</h3><a href="https://i.hongshu.com/register.html" target="_blank" class="registerbtn2">注册红薯中文网账号</a>
+        </div>
+        <p  class="clearfix">
+            <input class="" type="text" placeholder="注册用户名、手机号或电子邮箱" autocomplete="off" id="txtModelUsername" />
+        </p>
+        <div id="divModelUsernameTip" class="wrong" style="display:inline-block;">&nbsp;</div>
+        <p class="passwordp clearfix"><a id="a_showModelEyes" href="javascript:user_modellogin.showModelPassword()" class="eye-closed"></a>
+            <input id="txtModelPassword" class="password" type="password" name="password" maxlength="20" placeholder="密码" autocomplete="off" />
+        </p>
+        <div id="divModelPasswordTip" class="wrong" style="display:inline-block;">&nbsp;</div>
+        <p class="clearfix">
+            <input type="button" value="登录" class="submitbtn" onclick="user_modellogin.modelLogin()" />
+        </p>
+        <p class="forgot">
+            <label>
+                <input type="checkbox" tabindex="1" id="chkRemeber"  class="checkbox" />记住我
+            </label>
+            <a class="forgot-password" target="_blank"  href="https://i.hongshu.com/account/findpassword.html">忘记密码？</a>
+        </p>
+    </div>
+</div>
+
+<div id="floatingCirclesG" style="position: absolute; z-index: 3000; display:none;">
+    <div class="f_circleG" id="frotateG_01"></div>
+    <div class="f_circleG" id="frotateG_02"></div>
+    <div class="f_circleG" id="frotateG_03"></div>
+    <div class="f_circleG" id="frotateG_04"></div>
+    <div class="f_circleG" id="frotateG_05"></div>
+    <div class="f_circleG" id="frotateG_06"></div>
+    <div class="f_circleG" id="frotateG_07"></div>
+    <div class="f_circleG" id="frotateG_08"></div>
+</div>
+    <!--header-end-->
+    <!--con-start-->
+    <div class="main">
+        <!--一屏开始-->
+        <div class="clearfix">
+            <div class="col-3  paddingbom80 clearfix">
+                <div class="lf80 yahei top25">
+                    <div class="form-tit">
+                        <h2>欢迎您登录红薯中文网</h2>
+                    </div>
+                    <div class="borderrt1 clearfix">
+                        <div class="loginway top20 bom20 clearfix">
+                            <p class="c2">不用注册，您可以直接用微信号,QQ号，新浪微博号等登录。</p>
+                            <p class="c2">放心，我们不会记住您的这些账号密码</p>
+                            <ul class="clearfix top20">
+                                <li><a class="weixin-b" target="_blank" href="https://i.hongshu.com/third/wechat/login.html"></a>
+                                    <p>微信</p>
+                                </li>
+                                <li><a class="qq-b" target="_blank" href="https://i.hongshu.com/third/qq/login.html"></a>
+                                    <p>QQ</p>
+                                </li>
+                                <li><a class="weibo-b" target="_blank" href="https://i.hongshu.com/third/sina/login.html"></a>
+                                    <p>微博</p>
+                                </li>
+                                <li><a class="baidu-b" target="_blank" href="https://i.hongshu.com/third/baidu/login.html"></a>
+                                    <p>百度</p>
+                                </li>
+                                <li id="liAliLogin" style="display:none;"><a class="zhifubao-b" target="_blank" href="https://i.hongshu.com/third/alipay/login.html"></a>
+                                    <p>支付宝</p>
+                                </li>
+                            </ul>
+                            <div class="more morelogin rt20"><a href="javascript:void(0)" onclick="$('#liAliLogin').show();$(this).hide()"><span></span><span></span><span></span></a></div>
+                        </div>
+                        <div class="form-warp clearfix">
+                            <form method="post" action="https://i.hongshu.com/login.html" onsubmit="return checkLoginInfo()">
+                                <div class="form-tit3 bom10 clearfix">
+                                    <h3>使用红薯中文网账号登录：</h3>
+                                </div>
+                                <p class="clearfix">
+                                    <input class="" type="text" name="username" id="txtUserName" placeholder="注册用户名、手机号或电子邮箱" autocomplete="off" id=""
+                                                                         value="1946162355@qq.com"                                    />
+                                </p>
+                                <div class="wrong" style="display:inline-block;padding-top: 3px">&nbsp;</div>
+                                <p class="passwordp clearfix">
+                                    <a id="a_showEyes" href="javascript:showPassword('txtPassWord', 'a_showEyes')" class="eye-closed"></a>
+                                    <input class="password" type="password" name="password" id="txtPassWord" maxlength="20" placeholder="密码" autocomplete="off" id=""
+                                                                         value="chenhao#include0"                                    />
+                                </p>
+                                <div class="wrong" style="display:inline-block;padding-top: 3px">
+                                  参数不合法                                    
+                                </div>
+                                <p class="code clearfix">
+                                    <input class="codeword " type="text" name="validcode" maxlength="4" placeholder="请输入验证码" id="txtValidCode" value="7d6n" />
+                                    <a class="codeimg lf20" href="javascript:getValidCode()" title="看不清楚？点击换一张">
+                                      <img id="imgValidCode" src="https://i.hongshu.com/userverify.html" style="cursor:pointer;" />
+                                    </a>
+                                    <span category="validRight" class="explain correct" style="display:none"></span></p>
+                                <div id="divValidTip" class="wrong" style="display:inline-block;">
+                                                                      &nbsp;                                </div>
+                                <p class="clearfix">
+                                    <input name="url" type="hidden" value="https://www.hongshu.com/" />
+                                    <input name="sign" type="hidden" value="1" />
+                                    <input name="logining" type="hidden" value="1" />
+                                    <input type="submit" value="登录" class="submitbtn" id="btnLoginSub" style="cursor: pointer" />
+                                </p>
+                                <p class="forgot">
+                                    <label style="line-height: 25px; height: 25px">
+                                        <input type="checkbox" tabindex="1" name="remeber" id="" class="checkbox" /> 记住我
+                                    </label>
+                                    <a class="forgot-password" target="_blank" href="/account/findpassword.html">忘记密码？</a></p>
+                                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 top25 clearfix">
+                <div class="registerword">
+                    <p><a href="/register.html?sign=1">注册红薯中文网账号</a></p>
+                    <p><a href="/authorreg.html">成为红薯中文网作者</a></p>
+                </div>
+            </div>
+            <!--一屏结束-->
+        </div>
+    </div>
+    <!--con-end-->
+    <!--底开始-->
+    <div class="footer">
+    <div class="footercon">
+       <div class="left">
+            <p class="bom30">
+                <a href="https://www.hongshu.com/static/about/index.html" target="_blank">关于红薯</a>　|　<a href="https://www.hongshu.com/static/about/lxwm.html" target="_blank">联系我们</a>　|　<a href="https://www.hongshu.com/static/about/yhxy.html" target="_blank">用户协议</a>　|　<a href="https://www.hongshu.com/static/about/tgsm.html" target="_blank">投稿说明</a>　|　<a href="https://www.hongshu.com/static/help/index.html" target="_blank">帮助中心</a>　|　<a href="https://www.hongshu.com/static/about/bqsm.html" target="_blank">版权声明</a>　|　<a href="https://www.hongshu.com/static/about/kefu.html" target="_blank">客服中心</a>　|　<a href="https://www.hongshu.com/message.do" target="_blank">反馈留言</a></p>
+            <p>Copyright (C)  All rights reserved 版权所有 南京触手科技有限公司</p>
+            <p>
+<a rel="noreferrer" href="https://beian.miit.gov.cn/" target="_blank">苏ICP备17008861号-3</a>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010402000339"><img src="https://img2.hongshu.com/Public/images/gongan.png" style="width: 16px;margin: 0 5px 0 20px;"/>苏公网安备 32010402000339号</a><a onclick="$('#www').show();" ><img src="https://img2.hongshu.com/Public/images/cs/wenhuajingying.png" style="width: 16px;margin: 0 5px 0 20px;"/>苏网文〔2018〕1918-034号</a></p>
+		   <p><span>增值电信业务经营许可证：苏B2-20170125</span></p>
+            	<p style=" color:#999;padding-top:10px;">红薯网一贯提倡和支持作品的原创性，为维护作品原创作者的权益，打击盗版、剽窃、抄袭等违法和不道德行为，</p><!-- 
+                <p style=" color:#999;">息存储空间，本站不改变所有作品和书评，也不对其进行编辑修改等操作。红薯网一贯提倡和支持作品的原创性，为维护</p> -->
+                <p style=" color:#999;">谨请用户如发现作品有侵权行为请及时与<a style="color: #49cc3b;" href="https://www.hongshu.com/message.do" target="_blank">红薯网联系</a>，一经查实，立即删除，并保留追究当事人法律责任的权利。</p>
+        </div>
+        <div class="ww" style="display:none;" id="www"><img src="https://img2.hongshu.com/Public/images/cs/cs.jpg"/></div>
+        <div class="right">
+            <ul>
+                <li><img width="100" height="100" src="https://img2.hongshu.com/Public/images/hongshu_weibo.png" alt="" />
+                    <p class="c5">官方微博</p>
+                </li>
+                <li><img width="100" height="100" src="https://img2.hongshu.com/Public/images/hongshu_wechat.jpg" alt="" />
+                    <p class="c6">官方微信</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--分页按钮js模板 start-->
+<script type="text/html" id="pagelinkTpl">
+    <div class="pages top30 bom30 clearfix">
+        {{if pagecount ==0}}
+        {{else if pagecount == 1}}
+        <span class="disabled">|&lt;</span>
+        <span class="disabled">&lt;</span>
+        <span data-page="1" class="current">1</span>
+        <span class="disabled">&gt;</span>
+        <span class="disabled">&gt;|</span>
+        {{else}}
+        {{if curpage == 1}}
+        <span class="disabled">|&lt;</span>
+        <span class="disabled">&lt;</span>
+        {{else}}
+        <a class="pagelinkButton" data-page="1">|&lt;</a>
+        <a class="pagelinkButton" data-page="{{curpage - 1}}">&lt;</a>
+        {{/if}}
+
+        {{each pagelist as page index}}
+        {{if page == curpage}}
+        <span class="current">{{page}}</span>
+        {{else}}
+        <a class="pagelinkButton" data-page="{{page}}">{{page}}</a>
+        {{/if}}
+        {{/each}}
+
+        {{if curpage == pagecount}}
+        <span class="disabled">&gt;</span>
+        <span class="disabled">&gt;|</span>
+        {{else}}
+        <a class="pagelinkButton" data-page="{{curpage + 1}}">&gt;</a>
+        <a class="pagelinkButton" data-page="{{pagecount}}">&gt;|</a>
+        {{/if}}
+        {{/if}}
+    </div>
+</script>
+<!--分页按钮js模板 end-->
+<div id="dialog-confirm" title="提示" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>确认此操作吗？</p>
+</div>
+<div id="dialog-message" title="通知" style="display: none">
+  <p>
+    <span class="ui-icon ui-icon-contact" style="float:left; margin:0 7px 50px 0;"></span>
+    <span></span>
+  </p>
+  <p>&nbsp;
+    
+  </p>
+</div>
+<script>
+(function(){
+    var hs_ga = document.createElement('script');
+    hs_ga.type = 'text/javascript';
+    hs_ga.async = true;
+    hs_ga.src = hs_const_url.tjsitecount_js;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hs_ga, s);
+})();
+
+$(function () {
+    // 获取链接中的sid
+    var urlhash =  document.location.hash;
+    var _bid = '';
+    if (!_bid) {
+        _bid = '';
+    }
+    var _chapterid = '';
+    if (!_chapterid) {
+        _chapterid = '';
+    }
+    // 获取cookie中sid
+    var sid = CookieUtil.getCookie('_from_sid');
+    if (urlhash) {
+        var fromsid = '';
+        if (sid) {
+            fromsid = sid;
+        } else {
+            fromsid = urlhash.substring(urlhash.indexOf('fromsid=')+8,urlhash.length);
+        }
+        if(typeof fromsid !== undefined && fromsid != '' && fromsid != null){
+            if(!sid){
+                sid = fromsid;
+            }
+        }
+    }
+
+    if (sid) {
+        sendsid(sid,_bid,_chapterid);
+        var img=new Image();
+        img.setAttribute('lazy','y');
+        var url = "/home/tjsitecount/setsid.html" + '?sid=' + sid;
+        img.src = url;
+        $('body').append(img);
+
+    }
+});
+function sendsid(fromsid, bid, chapid) {
+    if(fromsid!=undefined && fromsid!='' && fromsid!=null) {
+        var oImg = new Image();
+        oImg.setAttribute('lazy','y');
+        var url = "/home/tjsitecount/statics.html" + '?sid=' + fromsid + '&bid='+bid + '&cid=' + chapid;
+        oImg.src = url;
+        $('body').append(oImg);
+    }
+
+}
+$('#www').on('click',function(){
+    $('#www').hide();
+})
+</script>
+<script type="text/javascript" src="https://tajs.qq.com/stats?sId=66146130 " charset="UTF-8"></script>
+<script type="text/javascript" language="javascript" src="https://img2.hongshu.com/min/b=hs2&amp;f=all_foot.js" charset="utf-8"></script>
+
+    <!--底结束-->
+</body>
+<if condition="">
+</html>

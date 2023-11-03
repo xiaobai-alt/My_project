@@ -1,0 +1,181 @@
+1.协程
+协程不是计算机提供的，而是程序员人员创造出来的
+
+协程，也可以称为微线程，是一种用户态的上下文切换技术，简而言之，其实是通过一个线程实现代码块相互切换执行
+
+例如
+def func1():
+    print(1)
+    ...
+    print(2)
+
+def func2():
+    print(3)
+    ...
+    print(4)
+
+func1()
+func2()
+
+协程可以实现在func1执行完print（1）后切换为func2的print（3）
+
+实现协程的几种方法：
+    ·greenlet，早期模块
+    ·yield关键字
+    ·asyncio装饰器（3.4）
+    ·async、await关键字
+
+#通过greenlet实现协程
+# from greenlet import greenlet
+#
+#
+# def func1():
+#     print(1)  #第二步：输出1
+#     gr2.switch() #第三步：切换到func2
+#     print(2) #第六步：输出2
+#     gr2.switch() #第七部：切换到func2
+#
+# def func2():
+#     print(3) #第四部：输出3
+#     gr1.switch() #第五步：切换到func1
+#     print(4) #第八步：输出4
+# gr1 = greenlet(func1)
+# gr2 = greenlet(func2)
+# gr1.switch()  #第一步执行func1函数
+
+#通过yield关键字
+
+# def func1():
+#     yield 1
+#     yield from func2() #此处跳转到func2，func2执行完成后接着执行func1
+#     yield 2
+#
+# def func2():
+#     yield 3
+#     yield 4
+# f1 = func1()
+# for item in f1:
+#     print(item)
+
+
+#通过asyncio(只有3.4及以后版本可以使用)
+
+# import asyncio
+# @asyncio.coroutine
+# def func1():
+#     print(1)
+#     yield from asyncio.sleep(2)  #通过IO耗时操作，自动化切换到tasks中的其他任务
+#     print(2)
+#
+# @asyncio.coroutine
+# def func2():
+#     print(3)
+#     yield from asyncio.sleep(2) #通过IO耗时操作，自动化切换到tasks中的其他任务
+#     print(4)
+#
+# tasks = [
+#     asyncio.ensure_future(func1()),
+#     asyncio.ensure_future(func2())
+# ]
+#
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(asyncio.wait(tasks))
+#
+
+#async & await关键字
+
+# import asyncio
+#
+# async def func1():
+#     print(1)
+#     await asyncio.sleep(2)  #通过IO耗时操作，自动化切换到tasks中的其他任务
+#     print(2)
+#
+#
+# async def func2():
+#     print(3)
+#     await asyncio.sleep(2) #通过IO耗时操作，自动化切换到tasks中的其他任务
+#     print(4)
+#
+# tasks = [
+#     asyncio.ensure_future(func1()),
+#     asyncio.ensure_future(func2())
+# ]
+#
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(asyncio.wait(tasks))
+
+协程的意义：
+
+在一个线程中如果遇到IO等待时间，线程不会等待，会利用空闲时间去进行其他操作
+
+
+异步编程：
+    1.事件循环：一个死循环，去检测并执行某些代码
+    2.协程函数：定义函数时  async def func()
+      协程对象，执行 协程函数（）得到的协程对象
+      async def func():
+               pass
+      result = func()  #注意：执行协程函数创建协程对象，函数内部的代码不会执行
+
+      如果想要执行写协程函数内部代码，必须要将协程对象交给时间循环来处理
+      async def func():
+               pass
+      result = func()
+
+      # loop = asyncio.get_event_loop()
+      # loop.run_until_complete(result)
+      asyncio.run(result)  # 3.7及以后用这步代替上面两行代码
+
+
+    3.await关键字
+        await + 可等待对象（协程对象，Future，Task对象 ->IO等待）
+
+        await 就是等待对象的值得到结果后才进行下一步
+
+    4.Task对象
+        task用于并发调度协程，通过asyncio.create_task(协程对象)的方法创建Task对象，这样可以让协程加入时间循环中等待被调度执行。除了使用asyncio.create_task()函数以外，
+        还可以用低层级的loop.create_task()或ensure_future()函数，不建议手动实例化Task对象
+
+    5.asyncio.Future对象
+        task继承future，task对象内部await结果的处理是基于future对象来的
+
+    6.concurrent.futures.Future对象
+        使用线程池或进程池实现异步操作时用到的对象
+
+    7.异步上下文管理器
+        此种对象通过定义_aenter_()和_aexit_()方法对async with语句中的环境进行控制
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>账号登录 - 马蜂窝</title>
+    <meta property="mfw:partner-platform" content="">
+    <link href="https://css.mafengwo.net/css/cv/css+login+login_v2:mobile+css+omc+login-omc+login-omc:passport+css+account_v2^ZFI^1645683546.css" rel="stylesheet" type="text/css"/>
+<script language="javascript" src="https://js.mafengwo.net/js/cv/js+global+json2:js+m.statistics:js+M+Module:js+M+M:js+mfwApiCrypto^ZVM^1643251272.js" type="text/javascript" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+<script>
+window.mfwApiCrypto.setConfig({
+  // 是否自动解密， 默认为false
+  autoDecrypt: false,
+  apis: [],
+  whiteList: ['https://static.mafengwo.net/wza/public/theme/1/toolbar.min.html'],
+});
+</script>
+<script defer async type="text/javascript" src="//static.mafengwo.net/wza/aria.js?appid=231e66a83e25807b37fadae6d233d5af" crossorigin="anonymous" charset="utf-8"></script>
+<a style="position: absolute;left: -200%;top: -200%;" href="javascript:void(0)" onclick="aria.start()">无障碍</a>
+
+    <div class="wrapper-v2">
+        <div class="container-v2">
+            <div class="signup-forms flip">
+                <div class="signup-box" id="_j_signup_box">
+                    <div class="account_v2_inner clearfix">
+                        <div class="account_v2_inner_left">
+                            <div class="account_v2_form" data-type="signup">
+                                                                                                    <div class="alert alert-danger">账号或密码不能为空</div>
+                                                                <form action="/regist/" method="post" id="_j_signup_form" onsubmit="return registCryptoData()">
+                                    <input type="hidden" name="token" value="ef66e10a3ce77602f14ca81c2c468c89"/>
+                                    <div class="form-field">
+                                        <input id="regist_ppt" type="text" placeholder="您的手机号码" autocomplete="off"
+                                               data-type="mobile"
+                                               data-verification-name="手机号码"
+                                               class="verification[required,maxSize[50],custom[mobile]]"
+                                               value=""/>
+                                        <input type='hidden' name="passport" id='regist_crypto_ppt'  value="" autocomplete="off"/> 
+                                                                                <div class="err-tip"></div>
+                                    </div>
+                                    <div class="form-field form-field-vcode">
+                                        <input name="code" data-verification-name="验证码"
+                                            class="verification[required,funcCall[checkCode]]"
+                                            type="text"
+                                            placeholder="请输入验证码"
+                                        /><a href="#" class="vcode-send verify-code-send"><img data-src="/api.php/verifyCode"
+                                            src="/api.php/verifyCode"/><span class="vcode-change">换一换</span></a>
+                                        <div class="err-tip"></div>
+                                    </div>
+                                    
+                                    <div class="submit-btn">
+                                        <button type="submit">立即注册</button>
+                                    </div>
+                                </form>
+                                <div class="agreement">
+                                    注册视为同意<a target="_blank" href="http://www.mafengwo.cn/s/agreement.html">《马蜂窝用户使用协议》</a>
+                                </div>
+                            </div>
+                            <div class="connect mfw-acc-hide">
+    <p class="hd">用合作网站账户直接登录</p>
+    <div class="bd">
+        <a href="/weibo" class="weibo">新浪微博</a>
+        <a href="/qq" class="qq">QQ</a>
+        <a href="/wechat" class="weixin">微信</a>
+        <div class="clear"></div>
+    </div>
+</div>                        </div>
+                        <div class="account_v2_inner_right mfw-acc-hide">
+                            <a class="download" href="https://www.mafengwo.cn/app/intro/gonglve.php"
+                               target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="bottom-link">
+                        已经注册?<a href="#" class="_j_go_login">马上登录</a>
+                    </div>
+                </div>
+                <div class="login-box" id="_j_login_box">
+                    <div class="account_v2_inner clearfix">
+                        <div class="account_v2_inner_left">
+                            <div class="account_v2_tabs clearfix">
+                                <p class="account_v2_tab _j_account_tab " data-type="qrcode">扫码登录</p>
+                                <p class="account_v2_tab _j_account_tab active" data-type="password">密码登录</p>
+                            </div>
+                            <div class="account_v2_form _j_account_form" data-type="password" style="display: block;">
+                                                                                                    <div class="alert alert-danger">账号或密码不能为空</div>
+                                                                <form action="/login/" method="post" id="_j_login_form" onsubmit="return loginCryptoData()">
+                                    <div class="form-field">
+                                        <input id="login_ppt" type="text" placeholder="您的邮箱/手机号" autocomplete="off"
+                                               data-verification-name="帐号"
+                                               class="verification[required,maxSize[50],funcCall[checkShowCode]]"
+                                               value=""/>
+                                        <input type='hidden' name="passport" id='login_crypto_ppt'  value="" autocomplete="off"/>       
+                                        <div class="err-tip"></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <input id="pwd" type="password" placeholder="您的密码" autocomplete="off"
+                                               data-verification-name="密码"
+                                               class="verification[required,minSize[4],maxSize[50]]"/>
+                                        <input type='hidden' name='password' id='crypto_pwd' value=""  autocomplete="off"/>
+                                        <div class="err-tip"></div>
+                                    </div>
+                                    <div class="form-field form-field-vcode hide">
+                                        <input name="code" data-verification-name="验证码"
+                                            class=""
+                                            type="text"
+                                            placeholder="请输入验证码"
+                                        /><a href="#" class="vcode-send verify-code-send"><img data-src="/api.php/verifyCode"
+                                            src="/api.php/verifyCode"/><span class="vcode-change">换一换</span></a>
+                                        <div class="err-tip"></div>
+                                    </div>
+                                    <div class="form-link"><a href="/forget">忘记密码</a></div>
+                                    <div class="submit-btn">
+                                        <button id="_js_loginBtn">登 录</button>
+                                    </div>
+                                </form>
+                                <!-- <form action="/login/" method="post" id="_j_login_form_hide" style="visibility: hidden;height: 0;">
+                                    <input id="_j_login_passport" type="text" name="passport" value="">
+                                    <input id="_j_login_password" type="text" name="password" value="">
+                                    <input id="_j_login_code" type="text" name="code" value="">
+                                </form> -->
+                            </div>
+                            <div class="account_v2_form _j_account_form" style="display: " data-type="qrcode">
+
+    <div class="qrcode_wrap _j_qrcode_wrap" data-type="normal" style="display:none;">
+        <p class="qrcode_tip">打开<a class="qrcode_tip_high" href="https://www.mafengwo.cn/app/intro/gonglve.php"
+                                   target="_blank">马蜂窝APP</a>-V9.3.38及以上版本扫描二维码，<br>免输入，更快更安全。</p>
+        <div class="qrcode_photo">
+            <div class="qrcode_photo_img _j_qrcode_img">
+                <img src="" alt="">
+            </div>
+            <div class="qrcode_photo_err _j_qrcode_err" style="display: none;">
+                <p class="qrcode_photo_err_tip _j_qrcode_err_tip"></p>
+                <a class="qrcode_photo_err_btn _j_qrcode_refresh">刷新</a>
+            </div>
+        </div>
+    </div>
+    <div class="qrcode_wrap _j_qrcode_wrap" data-type="scan" style="display:none;">
+        <p class="qrcode_scan_icon"></p>
+        <p class="qrcode_scan_txt">扫描成功!</p>
+        <p class="qrcode_tip">请勿刷新本页面，按手机提示操作</p>
+    </div>
+</div>                            <div class="connect mfw-acc-hide">
+    <p class="hd">用合作网站账户直接登录</p>
+    <div class="bd">
+        <a href="/weibo" class="weibo">新浪微博</a>
+        <a href="/qq" class="qq">QQ</a>
+        <a href="/wechat" class="weixin">微信</a>
+        <div class="clear"></div>
+    </div>
+</div>                        </div>
+                        <div class="account_v2_inner_right mfw-acc-hide">
+                            <a class="download" href="https://www.mafengwo.cn/app/intro/gonglve.php"
+                               target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="bottom-link">
+                        还没有账号?<a href="#" class="_j_go_register">马上注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script language="javascript" src="https://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+plugins+jquery.placeholder:passport+js+app^ZVA^1537192883.js" type="text/javascript" crossorigin="anonymous"></script>
+
+
+        <script type="text/javascript">
+        function loginCryptoData() {
+            var passport = document.getElementById('login_ppt');
+            var password = document.getElementById('pwd');
+            var crypto_pwd = document.getElementById('crypto_pwd');
+            var crypto_ppt = document.getElementById('login_crypto_ppt');
+            var data = {
+                password: password.value
+            }
+            var data1 =  {
+                passport: passport.value
+            }
+            data = mfwApiCrypto && mfwApiCrypto.encrypt(data, [ 'password' ]) || data;
+            data1 = mfwApiCrypto && mfwApiCrypto.encrypt(data1, [ 'passport' ]) || data1;
+            crypto_pwd.value = data._mfwencode; 
+            crypto_ppt.value = data1._mfwencode;
+            return true;
+        }
+
+        function registCryptoData() {
+            var passport = document.getElementById('regist_ppt');
+            var crypto_ppt = document.getElementById('regist_crypto_ppt');
+            var data1 =  {
+                passport: passport.value
+            }
+            data1 = mfwApiCrypto && mfwApiCrypto.encrypt(data1, [ 'passport' ]) || data1;
+            crypto_ppt.value = data1._mfwencode;
+            return true;
+        }
+    </script>
+    <script language="javascript" src="https://js.mafengwo.net/js/cv/js+mfw.verification:passport+js+form:passport+js+partner^ZlM^1630477246.js" type="text/javascript" crossorigin="anonymous"></script>
+
+
+    <script language="javascript" src="https://js.mafengwo.net/js/cv/js+module+app+Page:js+jquery.jsonp:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+dialog+alert:passport+js+Polling:passport+js+AccountQrcode^Yl1V^1631278964.js" type="text/javascript" crossorigin="anonymous"></script>
+
+        <script>
+            M.closure(function (require) {
+                require('/passport/js/AccountQrcode');
+            });
+        </script>
+    
+
+</body>
+</html>

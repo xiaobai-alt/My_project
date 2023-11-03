@@ -1,0 +1,27 @@
+selenium模块的基本使用
+问题：selenium模块和爬虫之间具有怎样的关联：
+    --便捷的获取网站中动态加载的数据
+    --便捷的实现模拟登录
+
+什么事selenium模块：
+    --基于浏览器自动化的一个模块
+
+selenium流程：
+    --下载一个浏览器的驱动程序
+    --实例化一个浏览器对象
+    --编写基于浏览器的代码
+        --发起请求：get(url)
+        --标签定位：find方法（这一步建议编写时查询次资料就行）
+        --标签交互：send_keys('xxx'),可以将xxx传入定位到的标签匡中
+        --网页前进后退：back(),forward()
+        --关闭浏览器：quit()
+
+    -selenium处理iframe
+        --如果定位的标签存在于iframe标签之中，则必须使用switch_to_frame(id)
+        --动作链（拖动）：导入包：from selenium.webdriver import ActionChains
+            --实例化一个动作链对象action = ActionChains(bro) ，bro是之前实例化的web对象
+            --click_and_hold()长按且点击操作
+            --move_by_offset(x,y)有两个参数（x,y）x代表水平方向，y代表垂直方向
+            --action.move_by_offset(40,0).perform()  perform()立即执行动作链操作
+            --#释放动作链 action.release()
+
