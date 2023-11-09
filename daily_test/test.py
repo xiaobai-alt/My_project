@@ -1,29 +1,32 @@
-import time
+import random
 
-from selenium.webdriver import Chrome
-from selenium.webdriver.chrome.options import Options
+def can_form_palindrome(word):
+    # 在此处编写你的代码
+    l1 = list(word.strip())
+    i = 0
+    while 1:
+        random.shuffle(l1)
+        print(l1)
+        l2 = l1.copy()
+        l1.reverse()
+        if i == 30:
+            return False
+            break
+        if l2 == l1:
+            return True
+            break
+        else:
+            i += 1
+            continue
 
-opt = Options()
-opt.add_experimental_option('excludeSwitches', ['enable-automation'])  # 去除浏览器顶部显示受自动化程序控制
-opt.add_experimental_option('detach', True)  # 规避程序运行完自动退出浏览器
-opt.add_argument('window-size=1920x1080')  # 指定浏览器分辨率
-opt.add_argument('--disable-gpu')  # 谷歌文档提到需要加上这个属性来规避bug
-opt.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
+    # word1 = ''.join([i for i in l1])
+    # if word1 == word:
+    #     return True
+    # else:
 
-opt.add_argument(
-    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36")
-web = Chrome(options=opt)
-# web.get('https://www.baidu.com')
-web.get('https://www.xiaohongshu.com/login')
-# # 解除浏览器特征识别selenium
-script = 'Object.defineProperty(navigator,"webdriver", {get: () => false,});'
-web.execute_script(script)
-# web.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-#   "source": """
-#     Object.defineProperty(navigator, 'webdriver', {
-#       get: () => undefined
-#     })
-#   """
-# })
 
-time.sleep(10000)
+
+# 从用户处获取输入
+word = input()
+# 调用函数
+print(can_form_palindrome(word))
